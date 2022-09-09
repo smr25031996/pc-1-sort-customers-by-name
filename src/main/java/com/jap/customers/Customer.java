@@ -1,13 +1,18 @@
 package com.jap.customers;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Customer implements Comparable<Customer> {
+
     private int customerId;
     private String customerName;
     private String customerGender;
     private boolean isSeniorCitizen;
     private String city;
+
+    public Customer() {
+    }
 
     public Customer(int customerId, String customerName, String customerGender, boolean isSeniorCitizen, String city) {
         this.customerId = customerId;
@@ -57,6 +62,8 @@ public class Customer implements Comparable<Customer> {
         this.city = city;
     }
 
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -81,9 +88,9 @@ public class Customer implements Comparable<Customer> {
                 '}';
     }
 
-    @Override
-    public int compareTo(Customer customer) {
 
-        return compareTo(customer);
+    @Override
+    public int compareTo(Customer o) {
+        return String.CASE_INSENSITIVE_ORDER.compare(this.customerName, o.customerName);
     }
 }
