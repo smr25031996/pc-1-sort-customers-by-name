@@ -1,6 +1,5 @@
 package com.jap.customers;
 
-import java.util.Comparator;
 import java.util.Objects;
 
 public class Customer implements Comparable<Customer> {
@@ -61,7 +60,6 @@ public class Customer implements Comparable<Customer> {
     public void setCity(String city) {
         this.city = city;
     }
-
 
 
     @Override
