@@ -86,7 +86,6 @@ public class Customer implements Comparable<Customer> {
                 '}';
     }
 
-
     @Override
     public int compareTo(Customer o) {
         return String.CASE_INSENSITIVE_ORDER.compare(this.customerName, o.customerName);
